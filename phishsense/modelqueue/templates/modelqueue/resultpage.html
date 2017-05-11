@@ -1,0 +1,18 @@
+{% extends "modelqueue/base.html" %}
+
+{% load bootstrap3 %}
+
+{% block title %}<title>{{ UI_PROJECT_TITLE }} Result Page</title>{% endblock title %}
+
+{% block content %}
+<div class="panel panel-default">
+    <p>Result Page</p>
+    <p>UID: {{ pvm.unique_id }}</p>
+    <p>Status: {% if pvm.analysis_stage == 4 %}Completed{% else %}Processing{% endif %}</p>
+    {% if pvm.analysis_stage == 4 %}
+        <p>Result: Clean | Suspect
+    {% else %}
+        <h3><span class="label label-info"><a href="{% url 'modelqueue:check_status' pvm.unique_id %}">Check Status</a></span></h3>
+    {% endif %}  
+</div>
+{% endblock content %}

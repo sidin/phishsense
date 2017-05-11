@@ -1,0 +1,21 @@
+{% extends "modelqueue/base.html" %}
+
+{% load bootstrap3 %}
+
+{% block title %}<title>{{ UI_PROJECT_TITLE }} index</title>{% endblock title %}
+
+{% block content %}
+<div class="panel panel-default">
+  <div class="panel-heading">Submit a URL</div>
+  <div class="panel-body">
+    <form action="." role="form" method="post" class="form-vertical">
+        {% csrf_token %}
+        {% bootstrap_form form layout=layout %}
+        {% buttons submit='Submit' %}{% endbuttons %}
+    </form>
+    </div>
+</div>
+<div>
+    <span class="index-ipaddress-span">{{ ipaddress }}</span>
+</div>
+{% endblock content %}

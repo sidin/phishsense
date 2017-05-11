@@ -1,3 +1,11 @@
+*.sqlite3
+*.pyc
+*.log
+.pydevproject
+.project
+crawled_files/
+crawled_files/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

@@ -1,0 +1,13 @@
+User Story 1. Web usage
+Go to the Home page.
+Paste the URL to analyse and Click Submit
+
+User Story 2. API usage
+Sample API usage mentioned in api_sample_loop1.py
+
+A Scheduler named "tasks_scheduler.py" present to invoke the REST API every 10 seconds.
+
+NOTE:
+Search localsettings and change localhost/8111 to server hosting the app
+Requires requests, simplejson and apscheduler packages to work (TODO: Create require script)
+Developed using Django 1.9.1 and Python 2.7.7
